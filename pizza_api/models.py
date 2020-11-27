@@ -12,5 +12,6 @@ class choice(models.Model):
 class piza_type(models.Model):
 	shape_id = models.ForeignKey(shape_piza, on_delete = models.CASCADE)
 	size_id = models.ForeignKey(size_piza, on_delete = models.CASCADE)
-	choice = models.ForeignKey(choice, on_delete = models.CASCADE)
+	#choice = models.ForeignKey(choice, on_delete = models.CASCADE)
+	choice = models.ManyToManyField(choice)
 
