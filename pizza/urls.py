@@ -18,9 +18,9 @@ from django.urls import path
 from pizza_api import views
 
 urlpatterns = [
-	path('api/posts',views.PostList.as_view()),
-	# path('api/posts/<int:pk>',views.Update.as_view()),
-	path('api/posts/<int:pk>',views.Remove.as_view()),
-	path('api/input',views.Input.as_view()),
-    path('admin/', admin.site.urls),
+	path('api/pizza/get',views.PostList.as_view()),	
+	path('api/pizza/<int:pk>',views.Remove.as_view()),
+	path('api/pizza/add',views.Input.as_view()),
+    	path('admin/', admin.site.urls),
 ]
+
